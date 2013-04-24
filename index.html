@@ -2,6 +2,7 @@
 <html>
 <head>
  <title>Gridly</title>
+ <link rel="stylesheet" type="text/css" href="foundation.css"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 </head>
 <style type="text/css">
@@ -18,6 +19,9 @@ html{
 body{
 	height: 100%;
 	margin: 0;
+	font-family: Helvetica, sans-serif;
+	position: relative;
+	background-color: #f4f4f6;
 }
 ul[type="none"] {
 	margin: 0;
@@ -27,43 +31,38 @@ p{
 	padding: 0;
 	margin: 0;
 }
-.pageConteiner{
-	height: 100%;
-	width: 100%;
-	font-family: Helvetica, sans-serif;
-	position: relative;
+a{
+	text-decoration: none;
 }
-.pageConteiner .page {
-	width: 100%;
-	height: 100%;
-	padding-top: 55px;
-	padding-left: 60px;
-	padding-right: 100px;
-	position: relative; 
-	z-index: 0;
+a:hover{
+	cursor: pointer;
 }
-.pageContainer .noise
+.columns{
+	padding: 0 7px;
+}
+.noise
 {
 	position: relative;
 	z-index: 1;
 	opacity: 0.7;
 	background: red;
 }
-.pageConteiner .page .footer,
-.pageConteiner .page .header {
+.pageConteiner  .footer,
+.pageConteiner .header {
 	position: relative;
 
 }
-.pageConteiner .page  .header > .logo {
+.pageConteiner .header > .logo {
 	font-size: 49px;
 	padding-bottom: 24px;
+	margin-top: 30px;
 
 }
-.pageConteiner .page .header > .logo span{
+.pageConteiner .header > .logo span{
 	color: #b5b5b5;
 }
-.pageConteiner .page  .footer .navigation ul li,
-.pageConteiner .page  .header .navigation ul li{
+.pageConteiner .footer .navigation ul li,
+.pageConteiner .header .navigation ul li{
 	position: relative;
 	display: inline-block;
 	padding: 16px 30px 16px 0;
@@ -71,8 +70,8 @@ p{
 	font-size: 12pt;
 
 }
-.pageConteiner .page  .footer .navigation ul li:first-child,
-.pageConteiner .page  .header .navigation ul li:first-child{
+.pageConteiner  .footer .navigation ul li:first-child,
+.pageConteiner  .header .navigation ul li:first-child{
 	position: absolute;
 	float: left;
 	left: 0;
@@ -80,41 +79,29 @@ p{
 	border-top: 2px solid #b8b8b8;
 	border-bottom: 2px solid #b8b8b8;
 }
-.pageConteiner .page .contenetConteiner {
-	width: 100%;
-	height: 100%;
-	padding-top: 15px;
-	padding-bottom: 30px;
-}
-.pageConteiner .page .contenetConteiner ul li{
-	display: inline-block;
-	vertical-align: top;
-}
-.pageConteiner .page .contenetConteiner .content{
-	width: 200px;
-	margin-right: 12px;
+
+
+.pageConteiner  .content{
 	margin-top: 15px;
 	border: 1px solid #e0e0e1;
 	background-color: white;
 }
-.pageConteiner .page .contenetConteiner .content .contentPicture{
+.pageConteiner   .content .contentPicture{
 	width: 100%;
 	display: block;
 }
 
-.pageConteiner .page .contenetConteiner .content .contentImage{
+.pageConteiner   .content .contentImage{
 	position: relative;
-	padding-bottom: -5px;
 }
-.pageConteiner .page .contenetConteiner .content .contentImage:hover{
+.pageConteiner  .content .contentImage:hover{
 	position: relative;
 	opacity: 1;
 	z-index: 10;
 	width: 100%;
 	cursor: pointer;
-	
 }
-.pageConteiner .page .contenetConteiner .content .contentImage .imageDescription {
+.pageConteiner  .content .contentImage .imageDescription {
 	height: 27px;
 	position: absolute;
 	background-color: black;
@@ -125,7 +112,7 @@ p{
 	font-style: italic;
 	z-index: 2;
 }
-.pageConteiner .page .contenetConteiner .content .contentImage .hoverImage {
+.pageConteiner  .content .contentImage .hoverImage {
 	position: absolute;
 	top: 0;
 	height: 100%;
@@ -134,7 +121,7 @@ p{
 	text-align: center;
 }
 
-.pageConteiner .page .contenetConteiner .content .contentImage .hoverImage > img {
+.pageConteiner  .content .contentImage .hoverImage > img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -142,26 +129,25 @@ p{
 	margin-left: -25px;
 }
 
-.pageConteiner .page .contenetConteiner .content .contentImage .hoverImage:hover {
+.pageConteiner .content .contentImage .hoverImage:hover {
 	position: absolute;
 	background-color: #444545;
 	opacity: 0.7;
-	/*background: url(magnifier.png) no-repeat;*/
-	vertical-align: middle;
+	
 }
 
-.pageConteiner .page .contenetConteiner .content .contentImage .imageDescription .descriptionText {
+.pageConteiner .content .contentImage .imageDescription .descriptionText {
 	padding: 5px 7px 0 7px;
 }
-.pageConteiner .page .contenetConteiner .content .contentInformation{
+.pageConteiner .content .contentInformation{
 	margin: 15px;
 	position: relative;
 
 }
-.pageConteiner .page .contenetConteiner .content .contentInformation .contentHeader{
+.pageConteiner  .content .contentInformation .contentHeader{
 	font-size: 13pt;
 }
-.pageConteiner .page .contenetConteiner .content .contentInformation .contentData {
+.pageConteiner  .content .contentInformation .contentData {
 	padding: 10px 0;
 	color: #8e8e8e;
 	font-size: 10px;
@@ -170,14 +156,14 @@ p{
 	border-bottom: 1px dotted #b8b8b8;
 }
 	
-.pageConteiner .page .contenetConteiner .content .contentInformation .contentText{
+.pageConteiner  .content .contentInformation .contentText{
 	padding: 10px 0;
 	font-size: 10pt;
 	color: #494e51;
 
 }
 	
-.pageConteiner .page .contenetConteiner .content .contentInformation .contentLink{
+.pageConteiner .content .contentInformation .contentLink{
 	font-style: italic;
 	color: #494e51;
 	font-size: 10pt;
@@ -185,24 +171,24 @@ p{
 	width: 60%;
 	border-top: 1px dotted #b8b8b8;
 }
-.pageConteiner .page .contenetConteiner .content .contentLink a,
-.pageConteiner .page .header .navigation a{
+.pageConteiner   .content .contentLink a,
+.pageConteiner  .header .navigation a{
 	text-decoration: none;
 	color: #44494c;
 }
-.pageConteiner .page .contenetConteiner .content .contentHeader a{
+.pageConteiner  .content .contentHeader a{
 	text-decoration: none;
 	color:black;
 }
-.pageConteiner .page .contenetConteiner .content .contentHeader a:hover,
-.pageConteiner .page .contenetConteiner .content .contentLink a:hover,
-.pageConteiner .page .header .navigation a:hover{
+.pageConteiner .content .contentHeader a:hover,
+.pageConteiner .content .contentLink a:hover,
+.pageConteiner .header .navigation a:hover{
 	color: #51707d;
 	cursor: pointer;
 }
 
 
-.pageConteiner .page  .footer .EotP {
+.pageConteiner   .footer .EotP {
 	height: 40px;
 }
 
@@ -214,221 +200,185 @@ p{
 	<div class="pageConteiner">
 		<div class="noise">
 		</div>
-		<div class="page">
-			<div class="header">
-				<div class="logo">Gridly<span>.</span></div>
-				<div class="navigation">
-					<ul type="none">
-						<li>&nbsp</li>
-						<li><a href="">home</a></li>
-						<li><a href="">digital designs</a></li>
-						<li><a href="">web designs</a></li>
-						<li><a href="">blanding/Identity</a></li>
-						<li><a href="">about me</a></li>
-						<li><a href="">contact</a></li>
-					</ul>
+		<div class="row">
+			<div class="twelve columns">
+				<div class="header">
+					<div class="logo">Gridly<span>.</span></div>
+					<div class="navigation">
+						<ul type="none">
+							<li>&nbsp</li>
+							<li><a href="">home</a></li>
+							<li><a href="">digital designs</a></li>
+							<li><a href="">web designs</a></li>
+							<li><a href="">blanding/Identity</a></li>
+							<li><a href="">about me</a></li>
+							<li><a href="">contact</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="contenetConteiner">
-				<div>
-				<ul type="none">
-					<li>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture11.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Photoshop, Design</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture12.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							
-					</li>
-					<li>
-						<div class="content">
-								<div class="contentImage">
-									<img src="picture21.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture22.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-					</li>
-					<li>
-						<div class="content">
-								<div class="contentImage">
-									<img src="picture31.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Photography</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture32.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-					</li>
-					<li>
-						<div class="content">
-								<div class="contentImage">
-									<img src="picture41.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Photoshop, Design</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture42.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-					</li>
-					<li>
-						<div class="content">
-								<div class="contentImage">
-									<img src="picture51.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Illustration, Identity</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="contentImage">
-									<img src="picture52.png" class="contentPicture"/>
-									<div class="imageDescription">
-										<div class="descriptionText">Photoshop, Design</div>
-									</div>
-									<div class="hoverImage"><img src="magnifier.png" /></div>
-								</div>
-								<div class="contentInformation">
-									<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
-									<div class="contentData">12th October 2011</div>
-									<div class="contentText">
-										<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
-									</div>
-									<div class="contentLink"><a href="">Read On &rarr;</a></div>
-								</div>
-							</div>
-					</li>
-				</ul>
-			</div>
-			</div>
-			<div class="footer">
-				<div class="navigation">
-					<ul type="none">
-						<li>&nbsp</li>
-						<li><a href="http://www.facebook.com/olga.likhacheva.169"><img src="facebook.png" /></a></li>
-						<li><a href="http://www.google.ru"><img src="gmail.png"></a></li>
-					</ul>
+		</div>
+		<div class="row">
+			<div class="three columns">
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture11.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Photoshop, Design</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
 				</div>
-				<div class="EotP">
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture12.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Illustration, Identity</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
 				</div>
-
+			</div>
+			<div class="three columns">
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture21.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Illustration, Identity</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture22.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Illustration, Identity</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="three columns">
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture31.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Photography</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture32.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Illustration, Identity</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="three columns">
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture41.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Photoshop, Design</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="contentImage">
+						<img src="picture42.png" class="contentPicture"/>
+						<div class="imageDescription">
+							<div class="descriptionText">Illustration, Identity</div>
+						</div>
+						<div class="hoverImage"><img src="magnifier.png" /></div>
+					</div>
+					<div class="contentInformation">
+						<div class="contentHeader"><a href="">Dulux colour Awards</a></div>
+						<div class="contentData">12th October 2011</div>
+						<div class="contentText">
+							<p>A direct mail kit that announced the Dulux Colour Awards Competition has commenced.</p><p>A collection of posters showing the famous colours of history, advertises you add your own colours of history.</p>
+						</div>
+						<div class="contentLink"><a href="">Read On &rarr;</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<div class="footer">
+					<div class="navigation">
+						<ul type="none">
+							<li>&nbsp</li>
+							<li><a href="http://www.facebook.com/olga.likhacheva.169"><img src="facebook.png" /></a></li>
+							<li><a href="http://www.google.ru"><img src="gmail.png"></a></li>
+						</ul>
+					</div>
+					<div class="EotP">
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+</html>
